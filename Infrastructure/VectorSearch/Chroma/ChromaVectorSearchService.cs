@@ -16,17 +16,23 @@ public sealed class ChromaVectorSearchService(HttpClient http, IConfiguration co
 
         try
         {
-            var collection = config["Chroma:CollectionName"] ?? "metroflow_knowledge";
-            var response = await http.PostAsJsonAsync($"/api/v1/collections/{collection}/query", new
+            var collectionName = config["Chroma:CollectionName"] ?? "metroflow_knowledge";
+            var collectionId = await ChromaApi.TryGetCollectionIdAsync(http, collectionName, cancellationToken);
+            if (!string.IsNullOrWhiteSpace(collectionId))
             {
-                query_texts = new[] { query },
-                n_results = limit
-            }, cancellationToken);
+                var response = await http.PostAsJsonAsync($"{ChromaApi.CollectionPath(collectionId)}/query", new
+                {
+                    query_embeddings = new[] { ChromaApi.Embed(query) },
+                    n_results = limit,
+                    include = new[] { "documents", "metadatas", "distances" }
+                }, cancellationToken);
 
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync(cancellationToken);
-                return [new VectorSearchResult("chroma:raw", json, 0.1, new Dictionary<string, string> { ["source"] = "chroma" })];
+                if (response.IsSuccessStatusCode)
+                {
+                    var payload = await response.Content.ReadFromJsonAsync<JsonElement>(cancellationToken);
+                    var results = MapResults(payload);
+                    if (results.Count > 0) return results;
+                }
             }
         }
         catch
@@ -45,11 +51,40 @@ public sealed class ChromaVectorSearchService(HttpClient http, IConfiguration co
             ["entityId"] = x.Id.ToString(),
             ["name"] = x.Name,
             ["code"] = x.Code,
-            ["fallback"] = "mysql"
+            ["fallback"] = "postgres"
         })).ToList();
 
         if (stationMatches.Count > 0) return stationMatches;
 
-        return [new VectorSearchResult("fallback:none", "ChromaDB no disponible y no hubo coincidencias simples en MySQL.", 1, new Dictionary<string, string> { ["fallback"] = "mysql" })];
+        return [new VectorSearchResult("fallback:none", "ChromaDB no disponible y no hubo coincidencias simples en PostgreSQL.", 1, new Dictionary<string, string> { ["fallback"] = "postgres" })];
+    }
+
+    private static IReadOnlyList<VectorSearchResult> MapResults(JsonElement payload)
+    {
+        var results = new List<VectorSearchResult>();
+        if (!payload.TryGetProperty("ids", out var ids) || ids.GetArrayLength() == 0) return results;
+
+        var firstIds = ids[0];
+        var documents = payload.TryGetProperty("documents", out var docs) && docs.GetArrayLength() > 0 ? docs[0] : default;
+        var metadatas = payload.TryGetProperty("metadatas", out var metas) && metas.GetArrayLength() > 0 ? metas[0] : default;
+        var distances = payload.TryGetProperty("distances", out var dists) && dists.GetArrayLength() > 0 ? dists[0] : default;
+
+        for (var i = 0; i < firstIds.GetArrayLength(); i++)
+        {
+            var id = firstIds[i].GetString() ?? "";
+            var content = documents.ValueKind == JsonValueKind.Array && documents.GetArrayLength() > i
+                ? documents[i].GetString() ?? ""
+                : "";
+            var score = distances.ValueKind == JsonValueKind.Array && distances.GetArrayLength() > i
+                ? distances[i].GetDouble()
+                : 0;
+            var metadata = metadatas.ValueKind == JsonValueKind.Array && metadatas.GetArrayLength() > i
+                ? ChromaApi.ToStringDictionary(metadatas[i])
+                : new Dictionary<string, string>();
+            metadata["source"] = "chroma";
+            results.Add(new VectorSearchResult(id, content, score, metadata));
+        }
+
+        return results;
     }
 }

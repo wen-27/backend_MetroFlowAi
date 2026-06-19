@@ -1,5 +1,4 @@
 using Domain.Alerts.Entities;
-using Domain.Assistant.Entities;
 using Domain.Buses.Entities;
 using Domain.BusPositions.Entities;
 using Domain.Incidents.Entities;
@@ -25,8 +24,5 @@ public interface IMetroFlowDbContext
     DbSet<Alert> Alerts { get; }
     DbSet<ArrivalPrediction> ArrivalPredictions { get; }
     DbSet<OperationalRecommendation> OperationalRecommendations { get; }
-    DbSet<ChatSession> ChatSessions { get; }
-    DbSet<ChatMessage> ChatMessages { get; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
-

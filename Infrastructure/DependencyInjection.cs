@@ -1,8 +1,6 @@
-using Application.Assistant.Abstractions;
 using Application.Common;
 using Application.Routing.Abstractions;
 using Application.VectorSearch.Abstractions;
-using Infrastructure.Assistant;
 using Infrastructure.Persistence;
 using Infrastructure.Routing.Graph;
 using Infrastructure.Seed;
@@ -18,15 +16,16 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("DefaultConnection")
-            ?? "server=localhost;port=3306;database=metroflow_ai;user=metroflow;password=metroflow123";
+            ?? "Host=localhost;Port=5433;Database=metroflow_ai;Username=metroflow;Password=metroflow123";
 
         services.AddDbContext<MetroFlowDbContext>(options =>
-            options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 36))));
+            options.UseNpgsql(
+                connectionString,
+                postgres => postgres.EnableRetryOnFailure()));
         services.AddScoped<IMetroFlowDbContext>(sp => sp.GetRequiredService<MetroFlowDbContext>());
         services.AddScoped<MetroFlowSeeder>();
         services.AddMemoryCache();
         services.AddScoped<IRouteGraphService, RouteGraphService>();
-        services.AddScoped<IAssistantService, AssistantService>();
         services.AddHttpClient<IVectorSearchService, ChromaVectorSearchService>(client =>
             client.BaseAddress = new Uri(configuration["Chroma:BaseUrl"] ?? "http://localhost:8001"));
         services.AddHttpClient<IVectorIndexingService, ChromaVectorIndexingService>(client =>

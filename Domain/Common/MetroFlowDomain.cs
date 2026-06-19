@@ -15,5 +15,3 @@ public enum IncidentSeverity { Low, Medium, High, Critical }
 public enum IncidentType { Congestion, Delay, RoadBlock, BusFailure, Security, Weather, Operational }
 public enum AlertType { Info, Warning, Critical, Recommendation }
 public enum RecommendationType { DispatchBus, AdjustFrequency, TransferSuggestion, Reroute }
-public enum ChatSender { User, System }
-

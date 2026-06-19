@@ -56,8 +56,8 @@ efbundle.exe
 docker-data/
 mysql_data/
 chroma_data/
+chroma-data/
 n8n_data/
 
 # HTTP scratch files
 *.http.env.json
-

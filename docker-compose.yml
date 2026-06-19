@@ -1,18 +1,17 @@
 services:
-  mysql:
-    image: mysql:8.4
-    container_name: metroflow_mysql
+  postgres:
+    image: postgres:16
+    container_name: metroflow_postgres
     environment:
-      MYSQL_DATABASE: metroflow_ai
-      MYSQL_USER: metroflow
-      MYSQL_PASSWORD: metroflow123
-      MYSQL_ROOT_PASSWORD: root123
+      POSTGRES_DB: metroflow_ai
+      POSTGRES_USER: metroflow
+      POSTGRES_PASSWORD: metroflow123
     ports:
-      - "3306:3306"
+      - "5432:5432"
     volumes:
-      - mysql_data:/var/lib/mysql
+      - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      test: ["CMD-SHELL", "pg_isready -U metroflow -d metroflow_ai"]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -23,7 +22,7 @@ services:
     ports:
       - "8001:8000"
     volumes:
-      - chroma_data:/chroma/chroma
+      - chroma_data:/data
 
   n8n:
     image: n8nio/n8n:latest
@@ -39,7 +38,6 @@ services:
       - n8n_data:/home/node/.n8n
 
 volumes:
-  mysql_data:
+  postgres_data:
   chroma_data:
   n8n_data:
-

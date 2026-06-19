@@ -17,8 +17,6 @@ erDiagram
     STATION ||--o{ ARRIVAL_PREDICTION : receives
     ROUTE ||--o{ OPERATIONAL_RECOMMENDATION : has
     STATION ||--o{ OPERATIONAL_RECOMMENDATION : has
-    CHAT_SESSION ||--o{ CHAT_MESSAGE : contains
 ```
 
-MySQL es la fuente de verdad transaccional. ChromaDB solo indexa documentos derivados para busqueda semantica.
-
+PostgreSQL es la fuente de verdad transaccional. ChromaDB solo indexa documentos derivados para busqueda semantica.

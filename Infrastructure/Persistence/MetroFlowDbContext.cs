@@ -1,6 +1,5 @@
 using Application.Common;
 using Domain.Alerts.Entities;
-using Domain.Assistant.Entities;
 using Domain.Buses.Entities;
 using Domain.BusPositions.Entities;
 using Domain.Incidents.Entities;
@@ -26,8 +25,6 @@ public sealed class MetroFlowDbContext(DbContextOptions<MetroFlowDbContext> opti
     public DbSet<Alert> Alerts => Set<Alert>();
     public DbSet<ArrivalPrediction> ArrivalPredictions => Set<ArrivalPrediction>();
     public DbSet<OperationalRecommendation> OperationalRecommendations => Set<OperationalRecommendation>();
-    public DbSet<ChatSession> ChatSessions => Set<ChatSession>();
-    public DbSet<ChatMessage> ChatMessages => Set<ChatMessage>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -38,6 +35,5 @@ public sealed class MetroFlowDbContext(DbContextOptions<MetroFlowDbContext> opti
         modelBuilder.Entity<Station>().HasIndex(x => x.Code).IsUnique();
         modelBuilder.Entity<Route>().HasIndex(x => x.Code).IsUnique();
         modelBuilder.Entity<Bus>().HasIndex(x => x.InternalCode).IsUnique();
-        modelBuilder.Entity<ChatSession>().HasIndex(x => x.SessionKey).IsUnique();
     }
 }

@@ -25,16 +25,11 @@ Content-Type: application/json
 }
 ```
 
-## Asistente
+## Chatbox guiado desde frontend
 
-```http
-POST /api/assistant/start
-POST /api/assistant/step
-```
+El frontend maneja el estado del flujo numerico. Ejemplo:
 
-```json
-{
-  "sessionId": "session-key",
-  "selectedOption": 1
-}
-```
+1. Usuario elige `Consultar mejor ruta`.
+2. Frontend llama `GET /api/public/stations`.
+3. Usuario selecciona origen y destino.
+4. Frontend llama `POST /api/public/route-plan`.
