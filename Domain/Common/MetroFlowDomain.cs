@@ -7,7 +7,7 @@ public abstract class Entity
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 }
 
-public enum OccupancyLevel { Low, Medium, High }
+public enum OccupancyLevel { Low, Medium, High, Critical }
 public enum RouteType { Trunk, Feeder, Express, Circular }
 public enum BusType { Standard, Articulated, Feeder, Electric }
 public enum BusStatus { InService, Delayed, OutOfService, Maintenance }

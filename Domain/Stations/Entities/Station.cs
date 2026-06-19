@@ -9,7 +9,10 @@ public sealed class Station : Entity
     public string Sector { get; set; } = "";
     public decimal Latitude { get; set; }
     public decimal Longitude { get; set; }
+    public int OccupancyCurrent { get; set; }
+    public int OccupancyPrediction20Min { get; set; }
+    public string Recommendation { get; set; } = "";
+    public int Capacity { get; set; }
     public bool IsActive { get; set; } = true;
     public OccupancyLevel CurrentOccupancyLevel { get; set; } = OccupancyLevel.Low;
 }
-

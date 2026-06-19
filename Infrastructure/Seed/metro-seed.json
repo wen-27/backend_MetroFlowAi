@@ -1,0 +1,1175 @@
+{
+  "routes": [
+    {
+      "id": "R1",
+      "name": "Ruta 1 — Portal Cacique ↔ Portal Estadio Montanini",
+      "origin": "Portal Cacique",
+      "destination": "Portal Estadio Montanini",
+      "activeBuses": 4,
+      "avgTimeMinutes": 35,
+      "delayMinutes": 2,
+      "occupancy": "high",
+      "status": "normal",
+      "pathCoordinates": [
+        [
+          7.0994344,
+          -73.1067222
+        ],
+        [
+          7.1015317,
+          -73.1069659
+        ],
+        [
+          7.1053006,
+          -73.1097554
+        ],
+        [
+          7.106493,
+          -73.1092404
+        ],
+        [
+          7.1111348,
+          -73.1100129
+        ],
+        [
+          7.1160747,
+          -73.1109141
+        ],
+        [
+          7.1184154,
+          -73.1113434
+        ],
+        [
+          7.1188219,
+          -73.1114353
+        ],
+        [
+          7.1177839,
+          -73.1154103
+        ],
+        [
+          7.1189124,
+          -73.1155391
+        ],
+        [
+          7.1213397,
+          -73.1165476
+        ],
+        [
+          7.1224894,
+          -73.1168695
+        ],
+        [
+          7.1238095,
+          -73.1174059
+        ],
+        [
+          7.1255442,
+          -73.1182953
+        ],
+        [
+          7.1269288,
+          -73.1189187
+        ],
+        [
+          7.1273014,
+          -73.1187148
+        ],
+        [
+          7.1278124,
+          -73.1186719
+        ],
+        [
+          7.128217,
+          -73.1183071
+        ],
+        [
+          7.1285257,
+          -73.1167622
+        ],
+        [
+          7.1293348,
+          -73.1152601
+        ],
+        [
+          7.1304526,
+          -73.1137795
+        ],
+        [
+          7.1309317,
+          -73.1130607
+        ],
+        [
+          7.1309743,
+          -73.1127067
+        ],
+        [
+          7.1343064,
+          -73.1125565
+        ],
+        [
+          7.1345938,
+          -73.1176741
+        ],
+        [
+          7.1347748,
+          -73.1177921
+        ],
+        [
+          7.1349345,
+          -73.1179423
+        ],
+        [
+          7.1364354,
+          -73.1178984
+        ],
+        [
+          7.1375959,
+          -73.1178458
+        ],
+        [
+          7.1377876,
+          -73.1200559
+        ],
+        [
+          7.1381282,
+          -73.1202598
+        ],
+        [
+          7.1380537,
+          -73.1204529
+        ],
+        [
+          7.1378088,
+          -73.1206353
+        ],
+        [
+          7.1374895,
+          -73.1205173
+        ],
+        [
+          7.1374256,
+          -73.1203027
+        ],
+        [
+          7.1346045,
+          -73.1203027
+        ],
+        [
+          7.1345406,
+          -73.1182427
+        ],
+        [
+          7.1343383,
+          -73.1180711
+        ],
+        [
+          7.1343277,
+          -73.1178458
+        ],
+        [
+          7.1345725,
+          -73.1176634
+        ],
+        [
+          7.1345406,
+          -73.116451
+        ]
+      ]
+    },
+    {
+      "id": "R2",
+      "name": "Ruta 2 — Portal Cacique ↔ Portal la Rosita",
+      "origin": "Portal Cacique",
+      "destination": "Portal la Rosita",
+      "activeBuses": 3,
+      "avgTimeMinutes": 28,
+      "delayMinutes": 0,
+      "occupancy": "medium",
+      "status": "normal",
+      "pathCoordinates": [
+        [
+          7.0994344,
+          -73.1067222
+        ],
+        [
+          7.1015317,
+          -73.1069659
+        ],
+        [
+          7.1053006,
+          -73.1097554
+        ],
+        [
+          7.106493,
+          -73.1092404
+        ],
+        [
+          7.1096844,
+          -73.1097883
+        ],
+        [
+          7.1090456,
+          -73.1142729
+        ],
+        [
+          7.1087262,
+          -73.1165045
+        ],
+        [
+          7.1082365,
+          -73.1174916
+        ],
+        [
+          7.1076829,
+          -73.1191438
+        ],
+        [
+          7.1070015,
+          -73.1196373
+        ],
+        [
+          7.1059367,
+          -73.1191396
+        ],
+        [
+          7.1052659,
+          -73.1191611
+        ],
+        [
+          7.1040522,
+          -73.1191182
+        ],
+        [
+          7.103818,
+          -73.1195152
+        ],
+        [
+          7.103669,
+          -73.1197297
+        ],
+        [
+          7.1029237,
+          -73.120234
+        ],
+        [
+          7.1031571,
+          -73.12144
+        ],
+        [
+          7.1034028,
+          -73.1232488
+        ],
+        [
+          7.1036157,
+          -73.1234526
+        ],
+        [
+          7.1040522,
+          -73.1233561
+        ],
+        [
+          7.1042971,
+          -73.1232059
+        ],
+        [
+          7.105383,
+          -73.1215214
+        ],
+        [
+          7.1064796,
+          -73.1210494
+        ],
+        [
+          7.1070119,
+          -73.1196439
+        ],
+        [
+          7.1085515,
+          -73.1200541
+        ],
+        [
+          7.1118306,
+          -73.1212665
+        ],
+        [
+          7.1134488,
+          -73.1218887
+        ],
+        [
+          7.1131933,
+          -73.1225754
+        ],
+        [
+          7.1129804,
+          -73.1226398
+        ],
+        [
+          7.1126888,
+          -73.1221378
+        ],
+        [
+          7.1074781,
+          -73.1155878
+        ],
+        [
+          7.1056683,
+          -73.1131498
+        ],
+        [
+          7.1047314,
+          -73.1121896
+        ],
+        [
+          7.1037732,
+          -73.1111381
+        ],
+        [
+          7.1040926,
+          -73.1103979
+        ],
+        [
+          7.1048059,
+          -73.1100009
+        ],
+        [
+          7.1048698,
+          -73.1094537
+        ],
+        [
+          7.1034112,
+          -73.1083486
+        ]
+      ]
+    },
+    {
+      "id": "R3",
+      "name": "Ruta 3 — Portal Cacique ↔ Portal Estadio Montanini (Cra 27)",
+      "origin": "Portal Cacique",
+      "destination": "Portal Estadio Montanini",
+      "activeBuses": 3,
+      "avgTimeMinutes": 34,
+      "delayMinutes": 5,
+      "occupancy": "high",
+      "status": "normal",
+      "pathCoordinates": [
+        [
+          7.0994993,
+          -73.1067032
+        ],
+        [
+          7.101586,
+          -73.1070465
+        ],
+        [
+          7.1053006,
+          -73.1097554
+        ],
+        [
+          7.106493,
+          -73.1092404
+        ],
+        [
+          7.1096844,
+          -73.1097883
+        ],
+        [
+          7.1087262,
+          -73.1165045
+        ],
+        [
+          7.1084869,
+          -73.116983
+        ],
+        [
+          7.1126888,
+          -73.1221378
+        ],
+        [
+          7.113512,
+          -73.1241713
+        ],
+        [
+          7.1147682,
+          -73.125201
+        ],
+        [
+          7.1178982,
+          -73.1262956
+        ],
+        [
+          7.1194068,
+          -73.1227037
+        ],
+        [
+          7.11941,
+          -73.1221328
+        ],
+        [
+          7.1213397,
+          -73.1165476
+        ],
+        [
+          7.1222631,
+          -73.1167899
+        ],
+        [
+          7.1255442,
+          -73.1182953
+        ],
+        [
+          7.1269288,
+          -73.1189187
+        ],
+        [
+          7.1274371,
+          -73.1186782
+        ],
+        [
+          7.1278124,
+          -73.1186719
+        ],
+        [
+          7.1280332,
+          -73.1191717
+        ],
+        [
+          7.1299921,
+          -73.1196008
+        ],
+        [
+          7.1328665,
+          -73.1199871
+        ],
+        [
+          7.1345406,
+          -73.1182427
+        ],
+        [
+          7.1343383,
+          -73.1180711
+        ],
+        [
+          7.1343277,
+          -73.1178458
+        ],
+        [
+          7.1345938,
+          -73.1176741
+        ],
+        [
+          7.1349345,
+          -73.1179423
+        ],
+        [
+          7.1364354,
+          -73.1178984
+        ],
+        [
+          7.1375959,
+          -73.1178458
+        ],
+        [
+          7.1377876,
+          -73.1200559
+        ],
+        [
+          7.1381282,
+          -73.1202598
+        ],
+        [
+          7.1379764,
+          -73.1206308
+        ],
+        [
+          7.1374895,
+          -73.1205173
+        ],
+        [
+          7.1374256,
+          -73.1203027
+        ],
+        [
+          7.1346045,
+          -73.1203027
+        ],
+        [
+          7.1327813,
+          -73.1199656
+        ],
+        [
+          7.1313973,
+          -73.119751
+        ]
+      ]
+    },
+    {
+      "id": "R4",
+      "name": "Ruta 4 — Portal Cacique ↔ Portal Provenza Enlace",
+      "origin": "Portal Cacique",
+      "destination": "Portal Provenza",
+      "activeBuses": 2,
+      "avgTimeMinutes": 18,
+      "delayMinutes": 0,
+      "occupancy": "low",
+      "status": "normal",
+      "pathCoordinates": [
+        [
+          7.0996236,
+          -73.1066793
+        ],
+        [
+          7.0980692,
+          -73.106454
+        ],
+        [
+          7.0978137,
+          -73.1065613
+        ],
+        [
+          7.097803,
+          -73.1080204
+        ],
+        [
+          7.0982928,
+          -73.1082672
+        ],
+        [
+          7.1004434,
+          -73.1077522
+        ],
+        [
+          7.100997,
+          -73.1070012
+        ],
+        [
+          7.1011354,
+          -73.1062502
+        ],
+        [
+          7.1011567,
+          -73.1054777
+        ],
+        [
+          7.1010715,
+          -73.1048876
+        ],
+        [
+          7.1005924,
+          -73.1049091
+        ],
+        [
+          7.100305,
+          -73.1049198
+        ],
+        [
+          7.1001985,
+          -73.1045765
+        ],
+        [
+          7.1006989,
+          -73.1043726
+        ],
+        [
+          7.1009331,
+          -73.1047481
+        ],
+        [
+          7.1013909,
+          -73.1050593
+        ],
+        [
+          7.1011248,
+          -73.1073231
+        ],
+        [
+          7.1007202,
+          -73.1078059
+        ],
+        [
+          7.0980798,
+          -73.1084067
+        ],
+        [
+          7.0959399,
+          -73.109255
+        ],
+        [
+          7.0952372,
+          -73.1094152
+        ],
+        [
+          7.0970365,
+          -73.1105739
+        ],
+        [
+          7.0973239,
+          -73.1110352
+        ],
+        [
+          7.0950562,
+          -73.1105954
+        ],
+        [
+          7.0929588,
+          -73.1101233
+        ],
+        [
+          7.0911595,
+          -73.1093723
+        ],
+        [
+          7.0883168,
+          -73.1084067
+        ]
+      ]
+    },
+    {
+      "id": "R5",
+      "name": "Ruta 5 — Portal Provenza ↔ Portal Cañaveral Expreso",
+      "origin": "Portal Provenza",
+      "destination": "Portal Cañaveral",
+      "activeBuses": 2,
+      "avgTimeMinutes": 15,
+      "delayMinutes": 1,
+      "occupancy": "high",
+      "status": "normal",
+      "pathCoordinates": [
+        [
+          7.0882429,
+          -73.1083787
+        ],
+        [
+          7.0871675,
+          -73.108089
+        ],
+        [
+          7.086039,
+          -73.1080568
+        ],
+        [
+          7.084016,
+          -73.1079925
+        ],
+        [
+          7.0820144,
+          -73.1081749
+        ],
+        [
+          7.0790865,
+          -73.1083036
+        ],
+        [
+          7.0762331,
+          -73.108368
+        ],
+        [
+          7.0745295,
+          -73.1083358
+        ],
+        [
+          7.0730283,
+          -73.1076062
+        ],
+        [
+          7.0717293,
+          -73.1063617
+        ],
+        [
+          7.0707924,
+          -73.1054283
+        ]
+      ]
+    },
+    {
+      "id": "R6",
+      "name": "Ruta 6 — Portal Provenza ↔ Portal Quebrada Seca",
+      "origin": "Portal Provenza",
+      "destination": "Portal Quebrada Seca",
+      "activeBuses": 3,
+      "avgTimeMinutes": 26,
+      "delayMinutes": 0,
+      "occupancy": "medium",
+      "status": "normal",
+      "pathCoordinates": [
+        [
+          7.0888161,
+          -73.1081945
+        ],
+        [
+          7.0908283,
+          -73.1089563
+        ],
+        [
+          7.0928406,
+          -73.109718
+        ],
+        [
+          7.0944163,
+          -73.1100613
+        ],
+        [
+          7.0971205,
+          -73.1107802
+        ],
+        [
+          7.1008468,
+          -73.1116063
+        ],
+        [
+          7.1034872,
+          -73.1106085
+        ],
+        [
+          7.104275,
+          -73.1108982
+        ],
+        [
+          7.1057016,
+          -73.1129259
+        ],
+        [
+          7.106745,
+          -73.114428
+        ],
+        [
+          7.1086507,
+          -73.11696
+        ],
+        [
+          7.1120681,
+          -73.1211764
+        ],
+        [
+          7.1133031,
+          -73.1239015
+        ],
+        [
+          7.1136544,
+          -73.1246418
+        ],
+        [
+          7.1144103,
+          -73.1250388
+        ],
+        [
+          7.118062,
+          -73.1264657
+        ],
+        [
+          7.1200528,
+          -73.1272597
+        ],
+        [
+          7.1223949,
+          -73.1282145
+        ]
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "ST-01",
+      "name": "Portal Parque de los Niños",
+      "occupancyCurrent": 65,
+      "occupancyPrediction20Min": 70,
+      "riskLevel": "medium",
+      "recommendation": "Operaciones estables. Gran afluencia de peatones por cercanía al parque.",
+      "capacity": 400
+    },
+    {
+      "id": "ST-02",
+      "name": "Portal Parque San Pío",
+      "occupancyCurrent": 72,
+      "occupancyPrediction20Min": 78,
+      "riskLevel": "medium",
+      "recommendation": "Afluencia moderada en horas pico por zona bancaria y gastronómica de Cabecera.",
+      "capacity": 450
+    },
+    {
+      "id": "ST-03",
+      "name": "Portal Parque de las Cigarras",
+      "occupancyCurrent": 45,
+      "occupancyPrediction20Min": 50,
+      "riskLevel": "low",
+      "recommendation": "Demanda regular. Sin demoras reportadas para abordajes vehiculares.",
+      "capacity": 350
+    },
+    {
+      "id": "ST-04",
+      "name": "Portal la Rosita",
+      "occupancyCurrent": 55,
+      "occupancyPrediction20Min": 60,
+      "riskLevel": "low",
+      "recommendation": "Operación normal sobre eje vial de la Avenida Rosita.",
+      "capacity": 400
+    },
+    {
+      "id": "ST-05",
+      "name": "Portal Parque Santander",
+      "occupancyCurrent": 82,
+      "occupancyPrediction20Min": 90,
+      "riskLevel": "high",
+      "recommendation": "Alta congestión en nodo central comercial. Monitorear flujos peatonales.",
+      "capacity": 500
+    },
+    {
+      "id": "ST-06",
+      "name": "Portal Cacique",
+      "occupancyCurrent": 75,
+      "occupancyPrediction20Min": 80,
+      "riskLevel": "high",
+      "recommendation": "Demanda alta por cercanía al centro comercial Cacique. Sincronizar paradas.",
+      "capacity": 450
+    },
+    {
+      "id": "ST-07",
+      "name": "Portal Cañaveral",
+      "occupancyCurrent": 88,
+      "occupancyPrediction20Min": 92,
+      "riskLevel": "critical",
+      "recommendation": "Alta congestión en nodo sur de Floridablanca. Habilitar puertas adicionales de contingencia.",
+      "capacity": 500
+    },
+    {
+      "id": "ST-08",
+      "name": "Portal Quebrada Seca",
+      "occupancyCurrent": 40,
+      "occupancyPrediction20Min": 45,
+      "riskLevel": "low",
+      "recommendation": "Flujo despejado. Todas las taquillas y accesos operando correctamente.",
+      "capacity": 350
+    },
+    {
+      "id": "ST-09",
+      "name": "Portal Provenza",
+      "occupancyCurrent": 94,
+      "occupancyPrediction20Min": 98,
+      "riskLevel": "critical",
+      "recommendation": "Saturación severa en transferencia. Priorizar envío de flota de reserva para desahogo.",
+      "capacity": 600
+    },
+    {
+      "id": "ST-10",
+      "name": "Portal Estadio Montanini",
+      "occupancyCurrent": 30,
+      "occupancyPrediction20Min": 40,
+      "riskLevel": "low",
+      "recommendation": "Flujo bajo controlado. Preparar planes de tráfico de contingencia ante eventos.",
+      "capacity": 550
+    }
+  ],
+  "buses": [
+    {
+      "id": "BUS-101",
+      "routeId": "R1",
+      "driverName": "Álvaro Gómez",
+      "latitude": 7.1184154,
+      "longitude": -73.1113434,
+      "occupancy": "high",
+      "status": "active",
+      "nextStation": "Portal Parque de los Niños",
+      "etaMinutes": 6
+    },
+    {
+      "id": "BUS-102",
+      "routeId": "R1",
+      "driverName": "Silvia Pinzón",
+      "latitude": 7.0994344,
+      "longitude": -73.1067222,
+      "occupancy": "medium",
+      "status": "active",
+      "nextStation": "Portal Parque San Pío",
+      "etaMinutes": 14
+    },
+    {
+      "id": "BUS-201",
+      "routeId": "R2",
+      "driverName": "Carlos Vega",
+      "latitude": 7.1031571,
+      "longitude": -73.12144,
+      "occupancy": "critical",
+      "status": "active",
+      "nextStation": "Portal la Rosita",
+      "etaMinutes": 10
+    },
+    {
+      "id": "BUS-202",
+      "routeId": "R2",
+      "driverName": "María Fernanda",
+      "latitude": 7.0994344,
+      "longitude": -73.1067222,
+      "occupancy": "low",
+      "status": "active",
+      "nextStation": "Portal Parque de las Cigarras",
+      "etaMinutes": 22
+    },
+    {
+      "id": "BUS-301",
+      "routeId": "R3",
+      "driverName": "Jorge Eliécer",
+      "latitude": 7.1126888,
+      "longitude": -73.1221378,
+      "occupancy": "low",
+      "status": "active",
+      "nextStation": "Portal Parque de los Niños",
+      "etaMinutes": 4
+    },
+    {
+      "id": "BUS-401",
+      "routeId": "R4",
+      "driverName": "Inés Duarte",
+      "latitude": 7.0959399,
+      "longitude": -73.109255,
+      "occupancy": "low",
+      "status": "active",
+      "nextStation": "Portal Provenza",
+      "etaMinutes": 9
+    },
+    {
+      "id": "BUS-501",
+      "routeId": "R5",
+      "driverName": "Gabriel Beltrán",
+      "latitude": 7.0790865,
+      "longitude": -73.1083036,
+      "occupancy": "medium",
+      "status": "active",
+      "nextStation": "Portal Cañaveral",
+      "etaMinutes": 5
+    },
+    {
+      "id": "BUS-601",
+      "routeId": "R6",
+      "driverName": "Martha Lucía",
+      "latitude": 7.1086507,
+      "longitude": -73.11696,
+      "occupancy": "medium",
+      "status": "active",
+      "nextStation": "Portal Quebrada Seca",
+      "etaMinutes": 12
+    }
+  ],
+  "alerts": [
+    {
+      "id": "AL-1",
+      "type": "retraso",
+      "target": "Ruta R3",
+      "level": "critical",
+      "description": "Falla menor en la vía secundaria de la Carrera 27 acumula tiempos de retraso de 12 minutos.",
+      "recommendation": "Hacer bypass de paradas secundarias e integrar un bus express de apoyo.",
+      "timestamp": "09:12 AM",
+      "status": "investigating"
+    },
+    {
+      "id": "AL-2",
+      "type": "alta ocupación",
+      "target": "Portal Provenza",
+      "level": "warning",
+      "description": "Saturación en plataforma de transferencias Provenza debido a demoras de flota.",
+      "recommendation": "Regular el despacho externo y priorizar el desvío controlado de viajes complementarios.",
+      "timestamp": "09:20 AM",
+      "status": "new"
+    },
+    {
+      "id": "AL-3",
+      "type": "congestión",
+      "target": "Ruta R5",
+      "level": "warning",
+      "description": "Intermitencia de tráfico en carril exclusivo de Autopista Sur afecta regularidad de la Ruta 5.",
+      "recommendation": "IA sugiere habilitar semáforos de prioridad temporal en intersección de Provenza.",
+      "timestamp": "09:25 AM",
+      "status": "new"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-101",
+      "type": "Obstrucción en vía mixta",
+      "location": "Sector Provenza Sur",
+      "affectedRoute": "R4 y R5",
+      "status": "active",
+      "activeDurationMinutes": 18,
+      "officerInCharge": "Sgto. Ortega, Policía de Tránsito"
+    },
+    {
+      "id": "INC-102",
+      "type": "Falla mecánica de unidad externa",
+      "location": "Portal Provenza",
+      "affectedRoute": "R3",
+      "status": "active",
+      "activeDurationMinutes": 5,
+      "officerInCharge": "Ing. Mauricio Prada, Metrolínea Mecánica"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "REC-1",
+      "title": "Aumentar frecuencia Ruta R5",
+      "impact": "Reduce ocupación en Portal Provenza en un 24%",
+      "priority": "high",
+      "suggestion": "Reducir intervalo de paso de 8 minutos a 5 minutos en el Portal Cañaveral para desahogar plataforma Troncal de Provenza.",
+      "applied": false,
+      "type": "frequency",
+      "targetId": "R5"
+    },
+    {
+      "id": "REC-2",
+      "title": "Despacho de bus complementario",
+      "impact": "Reduce tiempo de espera en R3 en 10 minutos",
+      "priority": "critical",
+      "suggestion": "Enviar de inmediato la unidad de reserva express (BUS-911) desde patios del Portal Cacique hacia Provenza.",
+      "applied": false,
+      "type": "dispatch",
+      "targetId": "R3"
+    },
+    {
+      "id": "REC-3",
+      "title": "Modificación de ruta de contingencia R1",
+      "impact": "Evita atasco vehicular en Autopista Central",
+      "priority": "medium",
+      "suggestion": "Desviar operativamente los buses de la ruta R1 por la Carrera 27 para ahorrar 9 minutos de viaje en atascos.",
+      "applied": false,
+      "type": "route",
+      "targetId": "R1"
+    }
+  ],
+  "peakDemandForecast": [
+    {
+      "hour": "06:00",
+      "passengers": 3200,
+      "capacity": 4000,
+      "risk": "low"
+    },
+    {
+      "hour": "07:00",
+      "passengers": 5900,
+      "capacity": 5500,
+      "risk": "critical"
+    },
+    {
+      "hour": "08:00",
+      "passengers": 6300,
+      "capacity": 5500,
+      "risk": "critical"
+    },
+    {
+      "hour": "09:00",
+      "passengers": 4200,
+      "capacity": 5000,
+      "risk": "high"
+    },
+    {
+      "hour": "10:00",
+      "passengers": 2800,
+      "capacity": 4500,
+      "risk": "low"
+    },
+    {
+      "hour": "11:00",
+      "passengers": 3100,
+      "capacity": 4500,
+      "risk": "low"
+    },
+    {
+      "hour": "12:00",
+      "passengers": 3900,
+      "capacity": 4500,
+      "risk": "medium"
+    },
+    {
+      "hour": "13:00",
+      "passengers": 3600,
+      "capacity": 4500,
+      "risk": "low"
+    },
+    {
+      "hour": "14:00",
+      "passengers": 2900,
+      "capacity": 4500,
+      "risk": "low"
+    },
+    {
+      "hour": "15:00",
+      "passengers": 3300,
+      "capacity": 4500,
+      "risk": "low"
+    },
+    {
+      "hour": "16:00",
+      "passengers": 4100,
+      "capacity": 4500,
+      "risk": "medium"
+    },
+    {
+      "hour": "17:00",
+      "passengers": 5800,
+      "capacity": 5200,
+      "risk": "high"
+    },
+    {
+      "hour": "18:00",
+      "passengers": 6800,
+      "capacity": 5500,
+      "risk": "critical"
+    },
+    {
+      "hour": "19:00",
+      "passengers": 5200,
+      "capacity": 5500,
+      "risk": "medium"
+    },
+    {
+      "hour": "20:00",
+      "passengers": 3000,
+      "capacity": 4000,
+      "risk": "low"
+    }
+  ],
+  "assistantResponses": [
+    {
+      "keywords": [
+        "como llego",
+        "cómo llego",
+        "buses a",
+        "ruta",
+        "cañaveral a estadio",
+        "provenza a quebras"
+      ],
+      "response": "La mejor opción recomendada por IA es tomar la ruta **R1** en el **Portal Cacique**, viajar directo o tomar la ruta **R5** en el **Portal Cañaveral** hacia el **Portal Provenza**. El tiempo estimado medio es de **20-30 minutos** con una ocupación media."
+    },
+    {
+      "keywords": [
+        "ocupacion",
+        "ocupación",
+        "lleno",
+        "congestion",
+        "congestión",
+        "provenza",
+        "portal provenza"
+      ],
+      "response": "El **Portal Provenza** presenta una ocupación del **94%** (Nivel Crítico) debido a congestión de flota. El sistema de inteligencia artificial sugiere aplicar el despacho de la unidad express **BUS-911**."
+    },
+    {
+      "keywords": [
+        "tiempo",
+        "retraso",
+        "r1",
+        "r3",
+        "llegada r3"
+      ],
+      "response": "La ruta **R3** posee unidades activas con frecuencia estable. El próximo bus pasará por su estación más cercana en **4 minutos**."
+    },
+    {
+      "keywords": [
+        "alertas",
+        "incidentes",
+        "paso algo",
+        "problema",
+        "que pasa",
+        "retrasos"
+      ],
+      "response": "Actualmente hay **3 alertas activas**. Destaca la ruta **R3** con un retraso en la Carrera 27 de **12 minutos**. Te sugerimos emplear desvíos o usar la Ruta R1."
+    }
+  ],
+  "defaultAiResponse": "Hola, soy el Asistente Inteligente de MetroFlow AI. Te guiaré con gusto sobre rutas, tiempos de llegada, alertas e información general en tiempo real del sistema Metrolínea. Prueba preguntar: **\"¿Cómo llego del Portal Cañaveral al Portal Estadio Montanini?\"** o **\"¿Qué alertas hay hoy?\"**"
+}
