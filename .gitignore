@@ -1,0 +1,63 @@
+# Build output
+bin/
+obj/
+out/
+publish/
+
+# .NET
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+TestResults/
+coverage/
+coverage.cobertura.xml
+*.trx
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+logs/
+LogFiles/
+
+# Environment / local secrets
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.local.json
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# EF temporary artifacts
+efbundle
+efbundle.exe
+
+# Docker/local persistence
+docker-data/
+mysql_data/
+chroma_data/
+n8n_data/
+
+# HTTP scratch files
+*.http.env.json
+
