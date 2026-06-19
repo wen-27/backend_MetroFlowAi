@@ -2,6 +2,141 @@
 
 Esta guia sirve para probar el backend, Postgres, ChromaDB y el frontend en otro computador.
 
+## Guia rapida en Windows PowerShell
+
+Esta seccion usa las rutas actuales del workspace:
+
+```powershell
+$Backend = "C:\Users\LENOVO\Desktop\Hackaton\backend_MetroFlowAi"
+$Frontend = "C:\Users\LENOVO\Desktop\Hackaton\Frontend_MetroFlowIA"
+```
+
+Si vas a abrir el proyecto por los tuneles de Visual Studio / VS Code, usa estas URLs publicas:
+
+```text
+Frontend: https://svg79f94-3000.use2.devtunnels.ms
+Backend API: https://svg79f94-5000.use2.devtunnels.ms
+ChromaDB: https://svg79f94-8001.use2.devtunnels.ms
+```
+
+El frontend queda configurado en `Frontend_MetroFlowIA/.env.local` para llamar al backend por:
+
+```text
+VITE_METROFLOW_API_URL=https://svg79f94-5000.use2.devtunnels.ms
+```
+
+Importante: despues de cambiar `.env.local`, reinicia `npm run dev`.
+
+### 1. Crear la base en PostgreSQL
+
+En DBeaver o pgAdmin crea la base si no existe:
+
+```sql
+CREATE DATABASE metroflow_ai;
+```
+
+La conexion actual del backend esta en `Api/appsettings.json`:
+
+```text
+Host=localhost
+Port=5432
+Database=metroflow_ai
+Username=postgres
+Password=Sfcalderon25.
+```
+
+### 2. Aplicar migraciones
+
+```powershell
+cd $Backend
+dotnet ef database update --project Infrastructure/Infrastructure.csproj --startup-project Api/Api.csproj --context MetroFlowDbContext
+```
+
+### 3. Correr backend
+
+```powershell
+cd $Backend
+dotnet run --project Api/Api.csproj --urls http://localhost:5000
+```
+
+Swagger:
+
+```powershell
+Start-Process http://localhost:5000/swagger
+```
+
+### 4. Correr ChromaDB
+
+Si no tienes ChromaDB instalado:
+
+```powershell
+py -m pip install chromadb
+```
+
+Luego corre ChromaDB en otra terminal:
+
+```powershell
+cd $Backend
+chroma run --path .\chroma-data --host localhost --port 8001
+```
+
+Verifica que responde:
+
+```powershell
+curl.exe http://localhost:8001/api/v2/heartbeat
+```
+
+### 5. Cargar datos y reindexar vectores
+
+Con backend y ChromaDB corriendo:
+
+```powershell
+curl.exe -X POST http://localhost:5000/api/app/reset
+curl.exe -X POST http://localhost:5000/api/admin/vector/reindex
+```
+
+### 6. Correr frontend
+
+```powershell
+cd $Frontend
+npm install
+npm run dev
+```
+
+Abre el frontend:
+
+```powershell
+Start-Process http://localhost:3000
+```
+
+Si Vite muestra otro puerto, por ejemplo `http://localhost:5173`, abre ese URL.
+
+### 7. Verificaciones utiles
+
+```powershell
+curl.exe http://localhost:5000/health
+curl.exe http://localhost:5000/api/app/state
+curl.exe -X POST http://localhost:5000/api/public/semantic-search -H "Content-Type: application/json" -d '{"query":"Portal Provenza ocupacion alta","limit":3}'
+```
+
+### 8. Si un puerto esta ocupado
+
+Para ver quien usa el puerto `5000`:
+
+```powershell
+netstat -ano | findstr :5000
+```
+
+Toma el ultimo numero de la linea `LISTENING`, que es el PID, y detenlo:
+
+```powershell
+Stop-Process -Id 12345
+```
+
+Reemplaza `12345` por el PID real.
+
+---
+
 ## 1. Requisitos
 
 - .NET SDK compatible con el proyecto.
